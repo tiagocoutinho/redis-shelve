@@ -33,7 +33,7 @@ class RedisShelf(Shelf):
         return "{prefix}{key}".format(prefix=self._prefix, key=key)
 
     def _remove_key_prefix(self, prefixed_key):
-        return prefixed_key[len(self._prefix) :]
+        return prefixed_key[len(self._prefix):]
 
     def __setitem__(self, key, value):
         return Shelf.__setitem__(self, self._prefix_key(key), value)
