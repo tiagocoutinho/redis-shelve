@@ -10,4 +10,4 @@ install:
   - pip install tox-travis
 script:
   - tox
-  - tox -e flake8
+  - tox -e syntax
