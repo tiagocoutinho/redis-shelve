@@ -10,4 +10,4 @@ exclude=
   redis_shelve.egg-info/
 max-line-length = 88
 select = C,E,F,W,B,B950
-ignore = E501,W503,F811
+ignore = E203,E501,W503,F811
