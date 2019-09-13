@@ -69,6 +69,9 @@ class RedisShelf(Shelf):
             print(our_key)
             yield our_key
 
+    def __contains__(self, key):
+        return self.dict.exists(self._prefix_key(key))
+
 
 def open(redis, key_prefix=None, protocol=None, writeback=False):
     return RedisShelf(
